@@ -1404,7 +1404,7 @@ extern "C" {
     pub fn getprotobynumber(proto: c_int) -> *mut protoent;
     pub fn chroot(name: *const c_char) -> c_int;
     #[cfg(target_os = "cygwin")]
-    pub fn usleep(secs: ::useconds_t) -> c_int;
+    pub fn usleep(secs: useconds_t) -> c_int;
     #[cfg_attr(
         all(target_os = "macos", target_arch = "x86"),
         link_name = "usleep$UNIX2003"
